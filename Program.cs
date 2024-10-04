@@ -68,6 +68,29 @@
                 Console.WriteLine($"Age:{p.Age} and Name:{p.Name}");
             }
 
+
+            ////////////////////Events///////////////////
+            ///
+            Events publisher = new Events();
+            Subcriber sub = new Subcriber();
+            publisher.OnNotify += sub.OnEventRaised;
+            publisher.RaiseEvent("Event Raised");
+
+            ///////////////////Event2/////////////
+            //
+
+            TempratureEvent temp=new TempratureEvent();
+            UserInputs user=new UserInputs();
+
+            temp.OnAlert += user.UserInputMessage;
+
+            temp.Temprature = 31;
+
+
+
+
+
+
             Console.ReadKey();
         }
 
@@ -75,7 +98,9 @@
         {
             Console.WriteLine(message);
         }
+        
 
+        
      
         
     }
