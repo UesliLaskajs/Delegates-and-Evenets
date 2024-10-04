@@ -12,8 +12,28 @@
 
             Delegates_and_Event logger = new Delegates_and_Event();//Initiated the class wich holds the methods
             EventDelegate delegates = logger.MessageConsole;//Initiated the Delegate and Added method from class logger
-            delegates("Hello");//Called the Delegate
+            delegates += logger.MessagePrint;//This is A multicast delegate wich holds reference for multiple methods
+            delegates -= logger.MessageConsole;
+            
+            bool result =Delegates_and_Event.IsMethodDelegate(delegates, logger.MessagePrint);
 
+            if (result) {
+               
+                logger.MethodInvoking(logger.MessagePrint,"Method Succesfully Invoked");
+                delegates("Hello");
+            }
+            else
+            {
+                Console.WriteLine("Method Not Found");
+            }
+
+
+            logger.MethodInvoking(logger.MessageConsole, "After Removing message Console");
+           
+           
+
+
+      
             int[] integerArr = { 1, 2, 3, 4, 5 };
             string[] strArr = { "one", "two", "three" };
 

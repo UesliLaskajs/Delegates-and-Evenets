@@ -16,9 +16,47 @@ namespace Events_and_Delegates
 
         public void MessagePrint(string message)
         {
-            Console.WriteLine("Print:");
+            Console.WriteLine("Print:"+message);
+
+        }
+
+        
+
+        public void MethodInvoking(EventDelegate eventDelegate, string message)
+        {
+            EventDelegate tempDelegate = eventDelegate;
+            if (tempDelegate != null)
+            {
+                tempDelegate(message);
+            }
+        }
+
+        public static  bool IsMethodDelegate(EventDelegate deleg,EventDelegate method)
+        {
+            if (deleg == null)
+            {
+                return false;
+            }
+
+            foreach(var item in deleg.GetInvocationList())
+            {
+                if (item == (Delegate)method)
+                {
+
+                    return true;
+                }
+
+                else
+                {
+                    return false;
+                }
+
+            }
+            return false;
         }
     }
+
+    
 
 
 }

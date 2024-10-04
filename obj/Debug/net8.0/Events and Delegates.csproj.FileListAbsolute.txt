@@ -12,3 +12,4 @@ C:\Users\User\source\repos\Events and Delegates\Events and Delegates\obj\Debug\n
 C:\Users\User\source\repos\Events and Delegates\Events and Delegates\obj\Debug\net8.0\Events and Delegates.pdb
 C:\Users\User\source\repos\Events and Delegates\Events and Delegates\obj\Debug\net8.0\Events and Delegates.genruntimeconfig.cache
 C:\Users\User\source\repos\Events and Delegates\Events and Delegates\obj\Debug\net8.0\ref\Events and Delegates.dll
+C:\Users\User\source\repos\Events and Delegates\Events and Delegates\obj\Debug\net8.0\Events and Delegates.sourcelink.json
